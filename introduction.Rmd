@@ -299,7 +299,7 @@ Now let's take a look at that same y variable in our dataframe.
 class(mydata$y)
 ```
 
-Wait. We never changed y to a factor. What? What just happened? I want those hours of my life back because of this this oversight. You will be there. I promise. The best workaround is to simply specify that you would not like this coercion to happen. 
+Wait. We never changed y to a factor. Wait. What just happened? It seems minor but trust me you will lose hours of your life because of this coercion. Trust me. You will be there. I promise. The best workaround is to simply specify that you would not like this coercion to happen. 
 
 ```{r}
 mydata <- data.frame(x, y,
@@ -308,6 +308,7 @@ class(mydata$y)
 
 ```
 
+This seems minor and it is -- until you forget about it.
 
 ## Plotting
 Like Python and MATLAB, R has basic plotting functions. You can create a number of different plots: line charts(```plot()```), histograms (```hist()```), bar charts (```barplot()```), and box plots (```boxplots()```). Here's a nice quick resource for basic plots in R <a href="http://www.statmethods.net/graphs/index.html">Quick-R Graphs Section</a>.
