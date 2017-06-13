@@ -61,6 +61,17 @@ I called this object 'x'. Stylistically, this is not the best name for a variabl
 
 Next, I used an equal sign to assign the array to the object. Admittedly, the R community prefers using '<-' instead. For many common cases, they work similarly. However, they are different in their scope, as shown in these examples <a href="https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">here</a>.
 
+One other practice that is important for coding is documentation. Documentation allows you to help you plan your code, keep track of your thoughts and rationale, and allows you to easily share your code with others. One form (and the most important form) of documentation is called commenting. Commenting can be done in R using the '#' function. If put a '#' in your code, R will not execute this line as code. Instead, R will ignore it.
+
+```{r}
+# 'x' is a vector of values
+x <- c(4, 5, 2, 7, 8, 9, 1) # R will run the x <- c(4, ..., 1) code, but it won't run the text after # 
+
+# show x
+x
+```
+
+
 ## Basic Object Manipulation
 In R, you can interact with your objects in a variety of ways. Let's first bring back our object 'x'.
 
@@ -78,6 +89,7 @@ length(x)
 
 When we execute the length function, we find that object 'x' has a length of 7. That is, object 'x' contains 7 values.
 
+#### Indexing a vector
 Now let's say we wanted to get one value of object 'x'. We can do that by indexing into 'x'. For this example, let's grab the 5th position of 'x'. We know that the 5th position of x is 8. We can accomplish this in R using the square bracket operator: '[]'.  
 
 ```{r}
@@ -86,11 +98,76 @@ x[5]
 
 To clarify, we called the object 'x' and then used the '[]' and an index number '5' to get the value 8. 
 
+#### Changing or reassigning elements in a vector
 We can also change, or reassign, specific elements of 'x' using the '[]' operator. Let's say we wanted to change the 5th position of x from 8 to 3.
 We can do this by calling the object 'x' and use the '[5]' operator to index into the 5th position of 'x'. We then use the assign function '<-' followed by '3' to change the 5th element of 'x' from 8 to 3.
 
 ```{r}
 x[5] <- 3
+x
+```
+
+By calling 'x', we can see that we successfully changed the 5th position of 'x' from 8 to 3.
+
+Now let's say you wanted to remove a specific position from object 'x'. For instance, let's remove the 3rd position of 'x', which should be 2.
+
+```{r}
+x[3]
+```
+
+#### Removing elements from a vector
+To remove this value, we do something slightly different. Instead of using just '3' in the '[]' operator, we will put '-3' in the '[]'.
+
+```{r}
+# Remove a value by using the '-' operator
+x[-3]
+```
+
+However, if we call 'x' again, we find that the 3rd position is still there.
+```{r}
+x
+```
+
+To save this change, we have to reassign 'x' to 'x[-3]'.
+
+```{r}
+# Reassign 'x' to save the updated version of 'x' that removes the value in the 3rd position
+x <- x[-3]
+x
+```
+
+#### Appending to a vector
+One last basic operation is appending or adding an element to the end of 'x'. As you'll find in programming, there are multiple solutions to an answer. Some are a little more efficient than others, but we will worry about that later. We will show you 2 of how to append or add to your 'x' object.
+
+The first way is familiar since it is how we first created the 'x' object. We will use the ```c()``` or the combine fuction.
+```{r}
+# Recreate 'x'
+x <- c(4, 5, 2, 7, 8, 9, 1)
+x
+
+# Append the number 4 to 'x' using the 'c()' function
+c(x, 4)
+
+# Save out the new 'x' using the '<-' assign function
+x <- c(x, 4)
+x
+```
+
+When using the ```c()``` function, we put 'x' in as the first argument followed by a ',' and then the value we want to add '4'.
+Similar to the removing a value, we must reassign 'x' to 'c(x, 4)'.
+
+We can also append to x using the ```append()``` function. In the ```append()``` function the first argument is the vector to be modified and the second argument contains the values to be included in the modified vector.
+
+```{r}
+# Recreate 'x'
+x <- c(4, 5, 2, 7, 8, 9, 1)
+x
+
+# Append the number 4 to 'x' using the 'c()' function
+append(x, 4)
+
+# Save out the new 'x' using the '<-' assign function
+x <- append(x, 4)
 x
 ```
 

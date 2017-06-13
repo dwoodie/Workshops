@@ -188,6 +188,13 @@ x</code></pre>
 <p>Awesome! We just created an object! It seems pretty uneventful at the moment but this is a huge step towards effectively working with data in R. There’s a few things to point out here about x. First, we created it by setting it equal to an array of numbers which we’re concatenated (by c). It is an interpretted language, meaning we didn’t have to specify the data type beforehand.</p>
 <p>I called this object ‘x’. Stylistically, this is not the best name for a variable. Typically, you want to call it something more informative like ‘price’ or ‘weight’. For this example, though, we’ll just keep it as ‘x’ for simplicity. Getting into style is beyond the scope of this tutorial, if you’d like to learn more about style – Google has put together a nice guide on <a href="http://google.github.io/styleguide/Rguide.xml">how to style your R code</a>.</p>
 <p>Next, I used an equal sign to assign the array to the object. Admittedly, the R community prefers using ‘&lt;-’ instead. For many common cases, they work similarly. However, they are different in their scope, as shown in these examples <a href="https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">here</a>.</p>
+<p>One other practice that is important for coding is documentation. Documentation allows you to help you plan your code, keep track of your thoughts and rationale, and allows you to easily share your code with others. One form (and the most important form) of documentation is called commenting. Commenting can be done in R using the ‘#’ function. If put a ‘#’ in your code, R will not execute this line as code. Instead, R will ignore it.</p>
+<pre class="r"><code># 'x' is a vector of values
+x &lt;- c(4, 5, 2, 7, 8, 9, 1) # R will run the x &lt;- c(4, ..., 1) code, but it won't run the text after # 
+
+# show x
+x</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1</code></pre>
 </div>
 <div id="basic-object-manipulation" class="section level2">
 <h2>Basic Object Manipulation</h2>
@@ -199,14 +206,68 @@ x</code></pre>
 <pre class="r"><code>length(x)</code></pre>
 <pre><code>## [1] 7</code></pre>
 <p>When we execute the length function, we find that object ‘x’ has a length of 7. That is, object ‘x’ contains 7 values.</p>
+<div id="indexing-a-vector" class="section level4">
+<h4>Indexing a vector</h4>
 <p>Now let’s say we wanted to get one value of object ‘x’. We can do that by indexing into ‘x’. For this example, let’s grab the 5th position of ‘x’. We know that the 5th position of x is 8. We can accomplish this in R using the square bracket operator: ‘<a href="#section"></a>’.</p>
 <pre class="r"><code>x[5]</code></pre>
 <pre><code>## [1] 8</code></pre>
 <p>To clarify, we called the object ‘x’ and then used the ‘<a href="#section"></a>’ and an index number ‘5’ to get the value 8.</p>
-<p>We can also change, or reassign, specific elements of ‘x’ using the ‘<a href="#section"></a>’ operator. Let’s say we wanted to change the 5th position of x from 8 to 3.</p>
+</div>
+<div id="changing-or-reassigning-elements-in-a-vector" class="section level4">
+<h4>Changing or reassigning elements in a vector</h4>
+<p>We can also change, or reassign, specific elements of ‘x’ using the ‘<a href="#section"></a>’ operator. Let’s say we wanted to change the 5th position of x from 8 to 3. We can do this by calling the object ‘x’ and use the ‘[5]’ operator to index into the 5th position of ‘x’. We then use the assign function ‘&lt;-’ followed by ‘3’ to change the 5th element of ‘x’ from 8 to 3.</p>
 <pre class="r"><code>x[5] &lt;- 3
 x</code></pre>
 <pre><code>## [1] 4 5 2 7 3 9 1</code></pre>
+<p>By calling ‘x’, we can see that we successfully changed the 5th position of ‘x’ from 8 to 3.</p>
+<p>Now let’s say you wanted to remove a specific position from object ‘x’. For instance, let’s remove the 3rd position of ‘x’, which should be 2.</p>
+<pre class="r"><code>x[3]</code></pre>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="removing-elements-from-a-vector" class="section level4">
+<h4>Removing elements from a vector</h4>
+<p>To remove this value, we do something slightly different. Instead of using just ‘3’ in the ‘<a href="#section"></a>’ operator, we will put ‘-3’ in the ‘<a href="#section"></a>’.</p>
+<pre class="r"><code># Remove a value by using the '-' operator
+x[-3]</code></pre>
+<pre><code>## [1] 4 5 7 3 9 1</code></pre>
+<p>However, if we call ‘x’ again, we find that the 3rd position is still there.</p>
+<pre class="r"><code>x</code></pre>
+<pre><code>## [1] 4 5 2 7 3 9 1</code></pre>
+<p>To save this change, we have to reassign ‘x’ to ‘x[-3]’.</p>
+<pre class="r"><code># Reassign 'x' to save the updated version of 'x' that removes the value in the 3rd position
+x &lt;- x[-3]
+x</code></pre>
+<pre><code>## [1] 4 5 7 3 9 1</code></pre>
+</div>
+<div id="appending-to-a-vector" class="section level4">
+<h4>Appending to a vector</h4>
+<p>One last basic operation is appending or adding an element to the end of ‘x’. As you’ll find in programming, there are multiple solutions to an answer. Some are a little more efficient than others, but we will worry about that later. We will show you 2 of how to append or add to your ‘x’ object.</p>
+<p>The first way is familiar since it is how we first created the ‘x’ object. We will use the <code>c()</code> or the combine fuction.</p>
+<pre class="r"><code># Recreate 'x'
+x &lt;- c(4, 5, 2, 7, 8, 9, 1)
+x</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1</code></pre>
+<pre class="r"><code># Append the number 4 to 'x' using the 'c()' function
+c(x, 4)</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1 4</code></pre>
+<pre class="r"><code># Save out the new 'x' using the '&lt;-' assign function
+x &lt;- c(x, 4)
+x</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1 4</code></pre>
+<p>When using the <code>c()</code> function, we put ‘x’ in as the first argument followed by a ‘,’ and then the value we want to add ‘4’. Similar to the removing a value, we must reassign ‘x’ to ‘c(x, 4)’.</p>
+<p>We can also append to x using the <code>append()</code> function. In the <code>append()</code> function the first argument is the vector to be modified and the second argument contains the values to be included in the modified vector.</p>
+<pre class="r"><code># Recreate 'x'
+x &lt;- c(4, 5, 2, 7, 8, 9, 1)
+x</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1</code></pre>
+<pre class="r"><code># Append the number 4 to 'x' using the 'c()' function
+append(x, 4)</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1 4</code></pre>
+<pre class="r"><code># Save out the new 'x' using the '&lt;-' assign function
+x &lt;- append(x, 4)
+x</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1 4</code></pre>
+</div>
 </div>
 <div id="dataframes" class="section level2">
 <h2>Dataframes</h2>
