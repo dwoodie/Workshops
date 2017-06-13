@@ -177,8 +177,39 @@ x
 ```
 
 ## Working with a vector of characters
-# how to create one
-# index the same
+You can also work with a vector of characters in R. A character is anything that is not a number. A character can be created by putting a value in single quotes ''.
+
+```{r}
+x <- 4
+x
+y <- '4'
+y
+```
+
+In this example, we created two variables, 'x' and 'y'. They look similar, however, there is a major difference between the two. 'x' contains the numeric value of 4, whereas 'y' contains the character value of 4.
+
+```{r}
+# Check to see if 'x' and 'y' are numeric or character type
+is.character(x)
+is.numeric(x)
+
+is.character(y)
+is.numeric(y)
+```
+
+The output shows that 'x' is a numeric value and 'y' is a character value.
+We can add, subtract, multiply, or divide 'x' by any value since it is numeric.
+
+```{r}
+x
+x + 4
+x - 2
+x*5
+x/6
+```
+
+However, if we try to add, subtract, multiply or divide 'y' by a value, it will result in an error.
+
 
 ## Dataframes
 Dataframes are the bread and butter of working with data in R. There's a universe of tools for working with this kind of data (i.e. see the <a href="">tidyverse</a>). When developing in R, you typically want to be working with dataframes because of their flexibility. They're so important, I'm going to dedicate the whole next section to working with data frames.
