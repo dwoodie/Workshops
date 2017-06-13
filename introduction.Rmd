@@ -268,9 +268,28 @@ mydata$x
 
 ```
 
-
-
 ## stringsAsFactors = FALSE
+This is a point of frustration for many developers getting started with R (many experienced developers as well). What are you talking about you ask? It's called coercion. Let me illustrate:
+
+```{r}
+class(y)
+```
+
+Now let's take a look at that same y variable in our dataframe.
+
+```{r}
+class(mydata$y)
+```
+
+Wait. We never changed y to a factor. What? What just happened? I want those hours of my life back because of this this oversight. You will be there. I promise. The best workaround is to simply specify that you would not like this coercion to happen. 
+
+```{r}
+mydata <- data.frame(x, y,
+                     stringsAsFactors = FALSE)
+class(mydata$y)
+
+```
+
 
 ## Plotting
 Like Python and MATLAB, R has basic plotting functions. You can create a number of different plots: line charts(```plot()```), histograms (```hist()```), bar charts (```barplot()```), and box plots (```boxplots()```). Here's a nice quick resource for basic plots in R <a href="http://www.statmethods.net/graphs/index.html">Quick-R Graphs Section</a>.
