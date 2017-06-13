@@ -275,7 +275,11 @@ mydata$x
 ## Plotting
 Like Python and MATLAB, R has basic plotting functions. You can create a number of different plots: line charts(```plot()```), histograms (```hist()```), bar charts (```barplot()```), and box plots (```boxplots()```). Here's a nice quick resource for basic plots in R <a href="http://www.statmethods.net/graphs/index.html">Quick-R Graphs Section</a>.
 
-For example, let's say we wanted to plot
+Let's explore a simple scatter plot using the 'x' vector we created before.
+```{r}
+x <- c(4, 5, 2, 7, 8, 9, 1)
+x
+```
 
 #Create an example for the plot
 

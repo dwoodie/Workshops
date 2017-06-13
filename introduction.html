@@ -342,9 +342,17 @@ y</code></pre>
 </div>
 <div id="what-is-a-dataframe" class="section level2">
 <h2>What is a dataframe?</h2>
+<p>A dataframe is an object that stores data in rows in columns. A column can be many different classes (i.e. one column can be a character where another is an integer).</p>
+<pre class="r"><code>x &lt;- c(4, 5, 2, 7, 8, 9, 1)
+y &lt;- c(&quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;b&quot;, &quot;b&quot;, &quot;b&quot;, &quot;b&quot;)
+
+mydata &lt;- data.frame(x, y)</code></pre>
 </div>
 <div id="the" class="section level2">
 <h2>The $</h2>
+<p>There’s a number of ways to index data in a dataframe. The most common way is to use a ‘$’ sign to reference a column.</p>
+<pre class="r"><code>mydata$x</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1</code></pre>
 </div>
 <div id="stringsasfactors-false" class="section level2">
 <h2>stringsAsFactors = FALSE</h2>
@@ -352,7 +360,10 @@ y</code></pre>
 <div id="plotting" class="section level2">
 <h2>Plotting</h2>
 <p>Like Python and MATLAB, R has basic plotting functions. You can create a number of different plots: line charts(<code>plot()</code>), histograms (<code>hist()</code>), bar charts (<code>barplot()</code>), and box plots (<code>boxplots()</code>). Here’s a nice quick resource for basic plots in R <a href="http://www.statmethods.net/graphs/index.html">Quick-R Graphs Section</a>.</p>
-<p>For example, let’s say we wanted to plot</p>
+<p>Let’s explore a simple scatter plot using the ‘x’ vector we created before.</p>
+<pre class="r"><code>x &lt;- c(4, 5, 2, 7, 8, 9, 1)
+x</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1</code></pre>
 </div>
 <div id="create-an-example-for-the-plot" class="section level1">
 <h1>Create an example for the plot</h1>
