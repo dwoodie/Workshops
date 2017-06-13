@@ -184,8 +184,26 @@ x
 Dataframes are the bread and butter of working with data in R. There's a universe of tools for working with this kind of data (i.e. see the <a href="">tidyverse</a>). When developing in R, you typically want to be working with dataframes because of their flexibility. They're so important, I'm going to dedicate the whole next section to working with data frames.
 
 ## What is a dataframe?
+A dataframe is an object that stores data in rows in columns. A column can be many different classes (i.e. one column can be a character where another is an integer).
+
+```{r}
+
+x <- c(4, 5, 2, 7, 8, 9, 1)
+y <- c("a", "a", "a", "b", "b", "b", "b")
+
+mydata <- data.frame(x, y)
+mydata$x
+
+```
 
 ## The $
+There's a number of ways to index data in a dataframe. The most common way is to use a '$' sign to reference a column.
+
+```{r}
+
+```
+
+
 
 ## stringsAsFactors = FALSE
 
