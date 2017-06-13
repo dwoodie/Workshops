@@ -52,11 +52,13 @@ x <- c(4, 5, 2, 7, 8, 9, 1)
 x
 ```
 
+To run this code, you'll want to highlight the code in the text editor and then hit Cmd + E on Macs or Ctrl + E on Windows. Additionally, there is a 'Run' button in the top right corner of the text editor which does the same.
+
 Awesome! We just created an object! It seems pretty uneventful at the moment but this is a huge step towards effectively working with data in R. There's a few things to point out here about x. First, we created it by setting it equal to an array of numbers which we're concatenated (by c). It is an interpretted language, meaning we didn't have to specify the data type beforehand.
 
 I called this object 'x'. Stylistically, this is not the best name for a variable. Typically, you want to call it something more informative like 'price' or 'weight'. For this example, though, we'll just keep it as 'x' for simplicity. Getting into style is beyond the scope of this tutorial, if you'd like to learn more about style -- Google has put together a nice guide on <a href="http://google.github.io/styleguide/Rguide.xml">how to style your R code</a>.
 
-Next, I used an equal sign to assign the array to the object. Admittedly, the R community prefers using '<-' instead. For many common cases, they work similarly. However, they are different in their scope, as shown in these examples <a href="https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">here</a>.
+Next, I used '<-' to assign the vector to the object 'x'. "Why didn't you use an equal sign?" you may ask and I don't have a great answer for that. I will say that you can use '=' in place of '<-' and the code will run just the same. However, they are different in their scope, as shown in these examples <a href="https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">here</a>.
 
 <!-- EMS: talk about how to index into an object -->
 <!-- EMS: talk about how to add to an object -->
@@ -67,7 +69,7 @@ One other practice that is important for coding is documentation. Documentation 
 
 ```{r}
 # 'x' is a vector of values
-x <- c(4, 5, 2, 7, 8, 9, 1) # R will run the x <- c(4, ..., 1) code, but it won't run the text after # 
+x <- c(4, 5, 2, 7, 8, 9, 1) # R will run the x <- c(4, ..., 1) code, but it won't run the text after '#' 
 
 # show x
 x
