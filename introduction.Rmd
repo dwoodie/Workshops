@@ -210,6 +210,39 @@ x/6
 
 However, if we try to add, subtract, multiply or divide 'y' by a value, it will result in an error.
 
+Despite this problem, we can create a vector of strings and operate on them as we did above with the 'x' vector.
+```{r}
+# Recreate 'x'
+x <- c(4, 5, 2, 7, 8, 9, 1)
+x
+y <- c('hi', 'hello', 'howdy')
+y
+```
+
+We can isolate a value in 'y' just like we did in 'x' using the '[]' operator. Let's say we want to grab the 3rd position of y.
+```{r}
+y
+y[3]
+```
+
+We can remove a specific value from 'y'using the '-' sign in the '[]' operator. For instance, let's remove the 1st position of y.
+```{r}
+y[1]
+y[-1]
+
+y <- y[-1]
+y
+```
+
+We can also append to the 'y' vector using the ```c()``` function.
+```{r}
+y
+y <- c(y, 'goodbye', 'ciao')
+y
+y <- c('first', 'second', y)
+y
+```
+As you can see in the example above, you can add elements to 'y' before or after 'y'. This depends on where you put 'y' when you call the ```c()``` function. 
 
 ## Dataframes
 Dataframes are the bread and butter of working with data in R. There's a universe of tools for working with this kind of data (i.e. see the <a href="">tidyverse</a>). When developing in R, you typically want to be working with dataframes because of their flexibility. They're so important, I'm going to dedicate the whole next section to working with data frames.

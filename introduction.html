@@ -292,7 +292,9 @@ is.character(x)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <pre class="r"><code>is.numeric(y)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
-<p>The output shows that ‘x’ is a numeric value and ‘y’ is a character value. We can add, subtract, multiply, or divide x by any value since it is numeric.</p>
+<p>The output shows that ‘x’ is a numeric value and ‘y’ is a character value. We can add, subtract, multiply, or divide ‘x’ by any value since it is numeric.</p>
+<pre class="r"><code>x</code></pre>
+<pre><code>## [1] 4</code></pre>
 <pre class="r"><code>x + 4</code></pre>
 <pre><code>## [1] 8</code></pre>
 <pre class="r"><code>x - 2</code></pre>
@@ -301,10 +303,51 @@ is.character(x)</code></pre>
 <pre><code>## [1] 20</code></pre>
 <pre class="r"><code>x/6</code></pre>
 <pre><code>## [1] 0.6666667</code></pre>
+<p>However, if we try to add, subtract, multiply or divide ‘y’ by a value, it will result in an error.</p>
+<p>Despite this problem, we can create a vector of strings and operate on them as we did above with the ‘x’ vector.</p>
+<pre class="r"><code># Recreate 'x'
+x &lt;- c(4, 5, 2, 7, 8, 9, 1)
+x</code></pre>
+<pre><code>## [1] 4 5 2 7 8 9 1</code></pre>
+<pre class="r"><code>y &lt;- c('hi', 'hello', 'howdy')
+y</code></pre>
+<pre><code>## [1] &quot;hi&quot;    &quot;hello&quot; &quot;howdy&quot;</code></pre>
+<p>We can isolate a value in ‘y’ just like we did in ‘x’ using the ‘[]’ operator. Let’s say we want to grab the 3rd position of y.</p>
+<pre class="r"><code>y</code></pre>
+<pre><code>## [1] &quot;hi&quot;    &quot;hello&quot; &quot;howdy&quot;</code></pre>
+<pre class="r"><code>y[3]</code></pre>
+<pre><code>## [1] &quot;howdy&quot;</code></pre>
+<p>We can remove a specific value from ‘y’using the’-‘sign in the’[]’ operator. For instance, let’s remove the 1st position of y.</p>
+<pre class="r"><code>y[1]</code></pre>
+<pre><code>## [1] &quot;hi&quot;</code></pre>
+<pre class="r"><code>y[-1]</code></pre>
+<pre><code>## [1] &quot;hello&quot; &quot;howdy&quot;</code></pre>
+<pre class="r"><code>y &lt;- y[-1]
+y</code></pre>
+<pre><code>## [1] &quot;hello&quot; &quot;howdy&quot;</code></pre>
+<p>We can also append to the ‘y’ vector using the <code>c()</code> function.</p>
+<pre class="r"><code>y</code></pre>
+<pre><code>## [1] &quot;hello&quot; &quot;howdy&quot;</code></pre>
+<pre class="r"><code>y &lt;- c(y, 'goodbye', 'ciao')
+y</code></pre>
+<pre><code>## [1] &quot;hello&quot;   &quot;howdy&quot;   &quot;goodbye&quot; &quot;ciao&quot;</code></pre>
+<pre class="r"><code>y &lt;- c('first', 'second', y)
+y</code></pre>
+<pre><code>## [1] &quot;first&quot;   &quot;second&quot;  &quot;hello&quot;   &quot;howdy&quot;   &quot;goodbye&quot; &quot;ciao&quot;</code></pre>
+<p>As you can see in the example above, you can add elements to ‘y’ before or after ‘y’. This depends on where you put ‘y’ when you call the <code>c()</code> function.</p>
 </div>
 <div id="dataframes" class="section level2">
 <h2>Dataframes</h2>
 <p>Dataframes are the bread and butter of working with data in R. There’s a universe of tools for working with this kind of data (i.e. see the <a href>tidyverse</a>). When developing in R, you typically want to be working with dataframes because of their flexibility. They’re so important, I’m going to dedicate the whole next section to working with data frames.</p>
+</div>
+<div id="what-is-a-dataframe" class="section level2">
+<h2>What is a dataframe?</h2>
+</div>
+<div id="the" class="section level2">
+<h2>The $</h2>
+</div>
+<div id="stringsasfactors-false" class="section level2">
+<h2>stringsAsFactors = FALSE</h2>
 </div>
 <div id="plotting" class="section level2">
 <h2>Plotting</h2>
