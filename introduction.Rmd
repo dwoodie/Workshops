@@ -214,29 +214,3 @@ If you require more information, I highly recommend using <a href="https://www.g
 <!-- ES: This linear model function might too stats heavy, maybe use mean, median, and mode? -->
 
 Base R comes with a lot of functions. For example, if you wanted to create a linear model it's as simple as running the 'lm' command with the appropriate parameter entries.
-
-
-## 
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-You can get the RMarkdown package by tying in the following code in the console of your RStudio IDE: 
-```install.packages("rmarkdown", dependencies = TRUE)```
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
