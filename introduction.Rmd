@@ -13,6 +13,25 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Download R & RStudio
 R and RStudio are free to download. Google them, download, and install them. Then open up RStudio.
 
+First install R:
+<ol type = "1">
+  <li>Go to <a href="https://cran.r-project.org">https://cran.r-project.org</a>.</li>
+  <li>Click "Download for R for [Your Operating System]".</li>
+  <li>Click "base" under "Subdirectories".</li>
+  <li>Click "Download R 3.x.0 for [Your Operating System] and save the file".</li>
+  <li>Navigate to the folder that contains the installation file. </li>
+  <li>Double-click the installation file and follow the directions.</li>
+</ol>
+
+Now install RStudio:  
+<ol type = "1">
+  <li>Go to <a href="https://www.rstudio.com">https://www.rstudio.com</a>.</li>
+  <li>Scroll down the website and click the "Download" tab under the RStudio Logo.</li>
+  <li>Scroll down and download the "RStudio Desktop - Open Source License". <i>*<b>Note</b>: This file should be free to use.</i></li>
+  <li>Click the the link and download the installer file: "Rstudio 1.0.xxx - [Your Operating System]".</li>
+  <li>Navigate to the folder that contains the installation file.</li>
+  <li>Double-click the installation file and follow the directions.</li>
+</ol>
 
 
 ## The IDE
