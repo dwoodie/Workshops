@@ -43,9 +43,6 @@ For those unfamiliar with IDEs, it will be where you write, run, and test R code
 To create a script, File > New File > R Script. Wa-lah! You have your first R script. Pretty boring at first but it will soon be filled with objects and functions that make nice visualizations or analyses for your data.
 
 
-Also, it won't look exactly like the images above. I have changed the color theme. To do this, go to Tools > Global Options > Appearance. In the Appearance pane, you'll have a few options. I've set my theme to VibrantInk.
-
-
 ## Creating Objects & Running Code
 To get in a cood habit of using the IDE, we'll write our code in the text editor portion of the IDE and then run it down in the console. This will save you a lot of headache compared to simply writing code down in the console and running the code.
 
