@@ -175,8 +175,10 @@ append(x, 4)
 x <- append(x, 4)
 x
 ```
->>>>>>> e30787e4cff6b05cdefaf22d16e4cf06c60e7394
 
+## Working with a vector of characters
+# how to create one
+# index the same
 
 ## Dataframes
 Dataframes are the bread and butter of working with data in R. There's a universe of tools for working with this kind of data (i.e. see the <a href="">tidyverse</a>). When developing in R, you typically want to be working with dataframes because of their flexibility. They're so important, I'm going to dedicate the whole next section to working with data frames.
