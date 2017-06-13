@@ -52,7 +52,7 @@ x <- c(4, 5, 2, 7, 8, 9, 1)
 x
 ```
 
-To run this code, you'll want to highlight the code in the text editor and then hit Cmd + E on Macs or Ctrl + E on Windows. Additionally, there is a 'Run' button in the top right corner of the text editor which does the same.
+To run this code, you'll want to highlight the code in the text editor and then hit Cmd + E on Macs or Ctrl + E on Windows. Additionally, there is a 'Run' button in the top right corner of the text editor which does the same thing as these shortcuts.
 
 Awesome! We just created an object! It seems pretty uneventful at the moment but this is a huge step towards effectively working with data in R. There's a few things to point out here about x. First, we created it by setting it equal to an array of numbers which we're concatenated (by c). It is an interpretted language, meaning we didn't have to specify the data type beforehand.
 
@@ -100,7 +100,7 @@ Now let's say we wanted to get one value of object 'x'. We can do that by indexi
 x[5]
 ```
 
-To clarify, we called the object 'x' and then used the '[]' and an index number '5' to get the value 8. 
+To clarify, we called the object 'x' and then used the '[]' and an index number '5' to get the value 8. You'll find that other languages often begin indexing at 0 instead of 1 (e.g. C, Python, and Javascript).
 
 #### Changing or reassigning elements in a vector
 We can also change, or reassign, specific elements of 'x' using the '[]' operator. Let's say we wanted to change the 5th position of x from 8 to 3.
@@ -176,7 +176,7 @@ x
 ```
 
 ## Working with a vector of characters
-You can also work with a vector of characters in R. A character is anything that is not a number. A character can be created by putting a value in single quotes ''.
+You can also work with a vector of characters in R. A character is anything that is not a number. A character can be created by putting a value in single quotes '' or double quotes "".
 
 ```{r}
 x <- 4
@@ -241,6 +241,7 @@ y
 y <- c('first', 'second', y)
 y
 ```
+
 As you can see in the example above, you can add elements to 'y' before or after 'y'. This depends on where you put 'y' when you call the ```c()``` function. 
 
 ## Dataframes
