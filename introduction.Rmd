@@ -245,9 +245,9 @@ y
 As you can see in the example above, you can add elements to 'y' before or after 'y'. This depends on where you put 'y' when you call the ```c()``` function. 
 
 ## Dataframes
-Dataframes are the bread and butter of working with data in R. There's a universe of tools for working with this kind of data (i.e. see the <a href="">tidyverse</a>). When developing in R, you typically want to be working with dataframes because of their flexibility. They're so important, I'm going to dedicate the whole next section to working with data frames.
+Dataframes are the bread and butter of working with data in R. There's a universe of tools for working with this kind of data (i.e. see the <a href="http://tidyverse.org/">tidyverse</a>). When developing in R, you typically want to be working with dataframes because of their flexibility. They're so important, I'm going to dedicate the whole next section to working with data frames.
 
-## What is a dataframe?
+### What is a dataframe?
 A dataframe is an object that stores data in rows in columns. A column can be many different classes (i.e. one column can be a character where another is an integer).
 
 ```{r}
@@ -259,8 +259,10 @@ mydata <- data.frame(x, y)
 
 ```
 
-## The $
-There's a number of ways to index data in a dataframe. The most common way is to use a '$' sign to reference a column.
+Where before we had single objects (i.e. x and y) that we indexed into, now we have an object that has both x and y. For those familiar with Excel, this can be thought of as two columns in a spreadsheet. 
+
+### The $
+Now that you have the data in this new object that contains both our and x and y vectors, how do we do some operations on it? As with many tasks in R, there's a number of ways to index data in a dataframe. The most common way is to use a '$' sign to reference a column.
 
 ```{r}
 
@@ -268,13 +270,13 @@ mydata$x
 
 ```
 
-Let's say you wanted to access the third entry in this column. We can use the same indexing rules introduced earlier.
+Neat. Let's say you wanted to access the third entry in this column. We can use the same indexing rules introduced earlier.
 
 ```{r}
 mydata$x[3]
 ```
 
-If you've worked with indexing blocks of data before, you know that you can often just index both the rows and columns (e.g. mydata[row,column]). This is totally valid but can be a little unclear when trying to read through the code (i.e. what is that column??). 
+As an aside, if you've worked with indexing blocks of data before, you know that you can often just index both the rows and columns (e.g. mydata[row,column]). This is totally valid but can be a little unclear when trying to read through the code (i.e. what is that column??). As such, we recommend using the '$' sign. 
 
 ```{r}
 mydata[,1]
@@ -283,7 +285,8 @@ mydata[3,1]
 
 ```
 
-## stringsAsFactors = FALSE
+
+### stringsAsFactors = FALSE
 This is a point of frustration for many developers getting started with R (many experienced developers as well). What are you talking about you ask? It's called coercion. Let me illustrate:
 
 ```{r}
