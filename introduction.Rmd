@@ -294,10 +294,27 @@ class(mydata$y)
 ## Plotting
 Like Python and MATLAB, R has basic plotting functions. You can create a number of different plots: line charts(```plot()```), histograms (```hist()```), bar charts (```barplot()```), and box plots (```boxplots()```). Here's a nice quick resource for basic plots in R <a href="http://www.statmethods.net/graphs/index.html">Quick-R Graphs Section</a>.
 
-Let's explore a simple scatter plot using the 'x' vector we created before.
+We can create a histogram of the data using the ```hist()``` function
+```{r}
+hist_data <- c(1, 1, 1, 2, 2, 3, 3, 3, 3, 4)
+hist_data
+hist(hist_data)
+```
+
+Let's explore a simple scatter plot using the 'x' object we created before using the ```plot()``` function with 'x' as an arugment. 
 ```{r}
 x <- c(4, 5, 2, 7, 8, 9, 1)
 x
+
+# Call the plot function to plot x
+plot(x)
+```
+
+Now we have a simple scatter plot of the 'x' object. The y-axis label is 'x' and the x-axis label is 'index'. We can change these properties within the function call of plot.
+
+## add 5*x and then plot x and y
+```{r}
+
 ```
 
 #Create an example for the plot
