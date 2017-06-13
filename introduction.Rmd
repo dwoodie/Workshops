@@ -37,7 +37,8 @@ Now install RStudio:
 ## The IDE
 IDE stands for integrated development environment. One of the best things about R is that the community has converged on using one IDE and that is RStudio. There are some other options (e.g. vim and VisualStudio) but the vast majority of folks use RStudio. 
 
-For those uninitiated with IDEs, it will be where you write, run, and test R code. There's a number of other features that make it convenient for development but these are the core aspects.
+<!-- EMS: changed uninitiated to unfamiliar -->
+For those unfamiliar with IDEs, it will be where you write, run, and test R code. There's a number of other features that make it convenient for development but these are the core aspects.
 
 To create a script, File > New File > R Script. Wa-lah! You have your first R script. Pretty boring at first but it will soon be filled with objects and functions that make nice visualizations or analyses for your data.
 
@@ -65,9 +66,32 @@ Next, I used an equal sign to assign the array to the object. Admittedly, the R 
 Dataframes are the bread and butter of working with data in R. There's a universe of tools for working with this kind of data (i.e. see the <a href="">tidyverse</a>). When developing in R, you typically want to be working with dataframes because of their flexibility. They're so important, I'm going to dedicate the whole next section to working with data frames.
 
 ## Plotting
+Like Python and MATLAB, R has basic plotting functions. You can 
 
 
 ## Functions
+<!-- ES: This can go anywhere -->
+One of the best functions is the ```help()``` function. For instance if you wanted to know what the ```mean()``` function does, you can type ```help(mean)```. A page should pop up in your RStudio Help box.
+
+The help page usually provides with:
+<ul>
+  <li>The package where the function comes from</li>
+  <li>The function name</li>
+  <li>A description of the function</li>
+  <li>How to use the function</li>
+  <li>The arguments of the function</li>
+  <li>The value of the function</li>
+  <li>A list of references</li>
+  <li>Related functions</li>
+  <li>Examples of how to use the function</li>
+</ul>
+
+You should be able to type in any function name into the ```help()``` function and get all of the information. The pop up help page will answer the majority of your questions.
+
+If you require more information, I highly recommend using <a href="https://www.google.com">Google</a> and <a href="https://www.stackoverflow.com">Stack Overflow</a>. More times than not, there will be a post or forum discussion that answers your question. A lot of programming is learned by figuring out tasks that are relevant to you or your current job.
+
+<!-- ES: This linear model function might too stats heavy, maybe use mean, median, and mode? -->
+
 Base R comes with a lot of functions. For example, if you wanted to create a linear model it's as simple as running the 'lm' command with the appropriate parameter entries.
 
 
@@ -76,6 +100,9 @@ Base R comes with a lot of functions. For example, if you wanted to create a lin
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+You can get the RMarkdown package by tying in the following code in the console of your RStudio IDE: 
+```install.packages("rmarkdown", dependencies = TRUE)```
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
