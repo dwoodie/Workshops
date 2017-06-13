@@ -268,6 +268,21 @@ mydata$x
 
 ```
 
+Let's say you wanted to access the third entry in this column. We can use the same indexing rules introduced earlier.
+
+```{r}
+mydata$x[3]
+```
+
+If you've worked with indexing blocks of data before, you know that you can often just index both the rows and columns (e.g. mydata[row,column]). This is totally valid but can be a little unclear when trying to read through the code (i.e. what is that column??). 
+
+```{r}
+mydata[,1]
+
+mydata[3,1]
+
+```
+
 ## stringsAsFactors = FALSE
 This is a point of frustration for many developers getting started with R (many experienced developers as well). What are you talking about you ask? It's called coercion. Let me illustrate:
 
