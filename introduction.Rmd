@@ -192,7 +192,6 @@ x <- c(4, 5, 2, 7, 8, 9, 1)
 y <- c("a", "a", "a", "b", "b", "b", "b")
 
 mydata <- data.frame(x, y)
-mydata$x
 
 ```
 
@@ -200,6 +199,8 @@ mydata$x
 There's a number of ways to index data in a dataframe. The most common way is to use a '$' sign to reference a column.
 
 ```{r}
+
+mydata$x
 
 ```
 
