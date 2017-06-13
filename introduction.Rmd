@@ -61,12 +61,11 @@ I called this object 'x'. Stylistically, this is not the best name for a variabl
 
 Next, I used an equal sign to assign the array to the object. Admittedly, the R community prefers using '<-' instead. For many common cases, they work similarly. However, they are different in their scope, as shown in these examples <a href="https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">here</a>.
 
-<<<<<<< HEAD
 <!-- EMS: talk about how to index into an object -->
 <!-- EMS: talk about how to add to an object -->
 <!-- EMS: talk about how to remove something from an object -->
 <!-- EMS: talk about how to perform operations -->
-=======
+
 One other practice that is important for coding is documentation. Documentation allows you to help you plan your code, keep track of your thoughts and rationale, and allows you to easily share your code with others. One form (and the most important form) of documentation is called commenting. Commenting can be done in R using the '#' function. If put a '#' in your code, R will not execute this line as code. Instead, R will ignore it.
 
 ```{r}
