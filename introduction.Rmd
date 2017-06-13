@@ -61,12 +61,19 @@ I called this object 'x'. Stylistically, this is not the best name for a variabl
 
 Next, I used an equal sign to assign the array to the object. Admittedly, the R community prefers using '<-' instead. For many common cases, they work similarly. However, they are different in their scope, as shown in these examples <a href="https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">here</a>.
 
+<!-- EMS: talk about how to index into an object -->
+<!-- EMS: talk about how to add to an object -->
+<!-- EMS: talk about how to remove something from an object -->
+<!-- EMS: talk about how to perform operations -->
+
 
 ## Dataframes
 Dataframes are the bread and butter of working with data in R. There's a universe of tools for working with this kind of data (i.e. see the <a href="">tidyverse</a>). When developing in R, you typically want to be working with dataframes because of their flexibility. They're so important, I'm going to dedicate the whole next section to working with data frames.
 
 ## Plotting
-Like Python and MATLAB, R has basic plotting functions. You can 
+Like Python and MATLAB, R has basic plotting functions. You can create a number of different plots: line charts(```plot()```), scatter plots (```scatter()```), bar charts (```barplot()```), and box plots (```boxplots()```). Here's a nice quick resource for basic plots in R <a href="http://www.statmethods.net/graphs/index.html">Quick-R Graphs Section</a>.
+
+For example, let's say we wanted to plot 
 
 
 ## Functions
