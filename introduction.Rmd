@@ -368,5 +368,6 @@ Base R comes with a lot of functions. For example, if you wanted to create a lin
 
 # Thank you! 
 We're done for now. Congratulations. We got through a lot of the basics of developing in R. Let's celebrate.
+
 <img src="its_over.gif" alt="itsover></img>
 
