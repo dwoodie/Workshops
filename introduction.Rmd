@@ -177,6 +177,8 @@ x <- append(x, 4)
 x
 ```
 
+<img src="numbers.gif" alt="numbers"></img>
+
 ## Working with a vector of characters
 You can also work with a vector of characters in R. A character is anything that is not a number. A character can be created by putting a value in single quotes '' or double quotes "".
 
@@ -188,6 +190,9 @@ y
 ```
 
 In this example, we created two variables, 'x' and 'y'. They look similar, however, there is a major difference between the two. 'x' contains the numeric value of 4, whereas 'y' contains the character value of 4.
+
+<img src="different.gif" alt="different"></img>
+
 
 ```{r}
 # Check to see if 'x' and 'y' are numeric or character type
@@ -266,6 +271,8 @@ Where before we had single objects (i.e. x and y) that we indexed into, now we h
 ### The $
 Now that you have the data in this new object that contains both our and x and y vectors, how do we do some operations on it? As with many tasks in R, there's a number of ways to index data in a dataframe. The most common way is to use a '$' sign to reference a column.
 
+<img src="money.gif" alt="money"></img>
+
 ```{r}
 
 mydata$x
@@ -318,6 +325,8 @@ This seems minor and it is -- until you forget about it.
 ## Plotting
 Like Python and MATLAB, R has basic plotting functions. You can create a number of different plots: line charts(```plot()```), histograms (```hist()```), bar charts (```barplot()```), and box plots (```boxplots()```). Here's a nice quick resource for basic plots in R <a href="http://www.statmethods.net/graphs/index.html">Quick-R Graphs Section</a>.
 
+<img src="burns.gif" alt="burns"></img>
+
 We can create a histogram of the data using the ```hist()``` function
 ```{r}
 hist_data <- c(1, 1, 1, 2, 2, 3, 3, 3, 3, 4)
@@ -356,6 +365,8 @@ for (i in 1:100) {
 ```
 
 Here the for loop will go through 100 times (starting at 1 and going until i = 100). I end up using for loops for a number of things. When reading data in from a director, I've used for loops to read in all the 'i' files in from the directory. I have also used it for simulating data sets (e.g. MCMC or bootstrap simulations).
+
+<img src="trek.gif" alt="trek"></img>
 
 Let's say I wanted to get the sampling distribution of the mean of an exponential distribution. I could do that with a for loop.
 
