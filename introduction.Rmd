@@ -54,7 +54,7 @@ x
 
 To run this code, you'll want to highlight the code in the text editor and then hit Cmd + E on Macs or Ctrl + E on Windows. Additionally, there is a 'Run' button in the top right corner of the text editor which does the same thing as these shortcuts.
 
-<img src="dog_balancing.gif" alt="dogbalancing"></img>
+<img src="dog_balance.gif" alt="dogbalance"></img>
 
 Awesome! We just created an object! It seems pretty uneventful at the moment but this is a huge step towards effectively working with data in R. There's a few things to point out here about x. First, we created it by setting it equal to an array of numbers which we're concatenated (by c). It is an interpretted language, meaning we didn't have to specify the data type beforehand.
 
@@ -336,12 +336,15 @@ plot(x)
 
 Now we have a simple scatter plot of the 'x' object. The y-axis label is 'x' and the x-axis label is 'index'. We can change these properties within the function call of plot.
 
-## add 5*x and then plot x and y
+Let's now plot a scatterplot
+
 ```{r}
 
-```
+y <- 5*x
 
-# Create an example for the plot
+plot(x, y)
+
+```
 
 ## for loops
 For loops are perfect for executing the same code for as many times as specified. They take the general form as below:
