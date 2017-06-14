@@ -354,6 +354,21 @@ for (i in 1:100) {
 
 Here the for loop will go through 100 times (starting at 1 and going until i = 100). I end up using for loops for a number of things. When reading data in from a director, I've used for loops to read in all the 'i' files in from the directory. I have also used it for simulating data sets (e.g. MCMC or bootstrap simulations).
 
+Let's say I wanted to get the sampling distribution of the mean of an exponential distribution. I could do that with a for loop.
+
+```{r}
+expBoot <- NULL
+# Generate 100 random numbers from a an exponential distribution with beta = 3
+expSample <- rexp(100,3)
+for (i in 1:1000) {
+  # Take the mean of a random sample of 100 from the random numbers
+  expBoot[i] <- mean(sample(expSample, 100))
+}
+
+```
+
+This is pretty great. This is, in effect, simulating central limit theorem in about 5 or 6 lines of code.
+
 ### Note on efficiency
 for loops can be great for a lot of things. I think they're best on smaller data sets because one thing they're notably bad with is when you are working with larger datasets. When you're working with larger datasets, you'll want to do something called vectorized operations or use a package that does vectorized operations for you to speed up processing.
 
