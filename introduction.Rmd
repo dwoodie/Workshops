@@ -312,6 +312,7 @@ This seems minor and it is -- until you forget about it.
 
 <img src="mountain_swing.gif" alt="dontforget"></img>
 
+
 ## Plotting
 Like Python and MATLAB, R has basic plotting functions. You can create a number of different plots: line charts(```plot()```), histograms (```hist()```), bar charts (```barplot()```), and box plots (```boxplots()```). Here's a nice quick resource for basic plots in R <a href="http://www.statmethods.net/graphs/index.html">Quick-R Graphs Section</a>.
 
@@ -364,3 +365,8 @@ If you require more information, I highly recommend using <a href="https://www.g
 <!-- ES: This linear model function might too stats heavy, maybe use mean, median, and mode? -->
 
 Base R comes with a lot of functions. For example, if you wanted to create a linear model it's as simple as running the 'lm' command with the appropriate parameter entries.
+
+# Thank you! 
+We're done for now. Congratulations. We got through a lot of the basics of developing in R. Let's celebrate.
+<img src="its_over.gif" alt="itsover></img>
+
