@@ -339,12 +339,21 @@ Now we have a simple scatter plot of the 'x' object. The y-axis label is 'x' and
 
 ```
 
-#Create an example for the plot
+# Create an example for the plot
 
-## For Loops
+## for loops
+For loops are perfect for executing the same code for as many times as specified. They take the general form as below:
 
+```{r}
+for (i in 1:100) {
+  # Do something i times
+}
+```
 
+Here the for loop will go through 100 times (starting at 1 and going until i = 100). I end up using for loops for a number of things. When reading data in from a director, I've used for loops to read in all the 'i' files in from the directory. I have also used it for simulating data sets (e.g. MCMC or bootstrap simulations).
 
+### Note on efficiency
+for loops can be great for a lot of things. I think they're best on smaller data sets because one thing they're notably bad with is when you are working with larger datasets. When you're working with larger datasets, you'll want to do something called vectorized operations or use a package that does vectorized operations for you to speed up processing.
 
 <img src="running_in_place.gif" alt="runninginplace"></img>
 
