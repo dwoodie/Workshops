@@ -310,6 +310,8 @@ class(mydata$y)
 
 This seems minor and it is -- until you forget about it.
 
+<img src="mountain_swing.gif" alt="dontforget"></img>
+
 ## Plotting
 Like Python and MATLAB, R has basic plotting functions. You can create a number of different plots: line charts(```plot()```), histograms (```hist()```), bar charts (```barplot()```), and box plots (```boxplots()```). Here's a nice quick resource for basic plots in R <a href="http://www.statmethods.net/graphs/index.html">Quick-R Graphs Section</a>.
 
