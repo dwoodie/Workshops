@@ -37,7 +37,6 @@ Now install RStudio:
 ## The IDE
 IDE stands for integrated development environment. One of the best things about R is that the community has converged on using one IDE and that is RStudio. There are some other options (e.g. vim and VisualStudio) but the vast majority of folks use RStudio. 
 
-<!-- EMS: changed uninitiated to unfamiliar -->
 For those unfamiliar with IDEs, it will be where you write, run, and test R code. There's a number of other features that make it convenient for development but these are the core aspects.
 
 To create a script, File > New File > R Script. Wa-lah! You have your first R script. Pretty boring at first but it will soon be filled with objects and functions that make nice visualizations or analyses for your data.
@@ -46,7 +45,7 @@ To create a script, File > New File > R Script. Wa-lah! You have your first R sc
 ## Creating Objects & Running Code
 To get in a cood habit of using the IDE, we'll write our code in the text editor portion of the IDE and then run it down in the console. This will save you a lot of headache compared to simply writing code down in the console and running the code.
 
-To start, let's create an object 'x' which is an array of numbers.
+To start, let's create an object 'x' which is a vector of numbers.
 ```{r}
 x <- c(4, 5, 2, 7, 8, 9, 1)
 x
@@ -56,11 +55,11 @@ To run this code, you'll want to highlight the code in the text editor and then 
 
 <img src="dog_balance.gif" alt="dogbalance"></img>
 
-Awesome! We just created an object! It seems pretty uneventful at the moment but this is a huge step towards effectively working with data in R. There's a few things to point out here about x. First, we created it by setting it equal to an array of numbers which we're concatenated (by c). It is an interpretted language, meaning we didn't have to specify the data type beforehand.
+Awesome! We just created an object! It seems pretty uneventful at the moment but this is a huge step towards effectively working with data in R. There's a few things to point out here about x. First, we created it by assigning it with '<-' to a vector of numbers which we're concatenated (by c).
 
 I called this object 'x'. Stylistically, this is not the best name for a variable. Typically, you want to call it something more informative like 'price' or 'weight'. For this example, though, we'll just keep it as 'x' for simplicity. Getting into style is beyond the scope of this tutorial, if you'd like to learn more about style -- Google has put together a nice guide on <a href="http://google.github.io/styleguide/Rguide.xml">how to style your R code</a>.
 
-Next, I used '<-' to assign the vector to the object 'x'. "Why didn't you use an equal sign?" you may ask and I don't have a great answer for that. I will say that you can use '=' in place of '<-' and the code will run just the same. However, they are different in their scope, as shown in these examples <a href="https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">here</a>.
+If you've worked with another programming language, you might be asking about '<-'. Namely, "Why didn't you use an equal sign?" you may ask and I don't have a great answer for that. I will say that you can use '=' in place of '<-' for the vast majority of your code and the code will run just the same. However, they are different in their scope, as shown in these examples <a href="https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">here</a>.
 
 <!-- EMS: talk about how to index into an object -->
 <!-- EMS: talk about how to add to an object -->
@@ -317,7 +316,7 @@ class(mydata$y)
 
 ```
 
-This seems minor and it is -- until you forget about it.
+This seems minor and it is. Until you forget about it.
 
 <img src="mountain_swing.gif" alt="dontforget"></img>
 
@@ -343,9 +342,7 @@ x
 plot(x)
 ```
 
-Now we have a simple scatter plot of the 'x' object. The y-axis label is 'x' and the x-axis label is 'index'. We can change these properties within the function call of plot.
-
-Let's now plot a scatterplot
+Now we have a simple scatter plot of the 'x' object. The y-axis label is 'x' and the x-axis label is 'index'. We can change these properties within the function call of plot. This really isn't that informative so let's make a new object that's a function of x and plot it.
 
 ```{r}
 
@@ -354,6 +351,8 @@ y <- 5*x
 plot(x, y)
 
 ```
+
+Sweet! We made a scatterplot in about 3 lines of code. 
 
 ## for loops
 For loops are perfect for executing the same code for as many times as specified. They take the general form as below:
@@ -364,7 +363,7 @@ for (i in 1:100) {
 }
 ```
 
-Here the for loop will go through 100 times (starting at 1 and going until i = 100). I end up using for loops for a number of things. When reading data in from a director, I've used for loops to read in all the 'i' files in from the directory. I have also used it for simulating data sets (e.g. MCMC or bootstrap simulations).
+Here the for loop will go through 100 times (starting at 1 and going until i = 100). I end up using for loops for a number of things. When reading data in from a directory, I've used for loops to read in all the 'i' files in from the directory. I have also used it for simulating data sets (e.g. MCMC or bootstrap simulations).
 
 <img src="trek.gif" alt="trek"></img>
 
@@ -384,12 +383,13 @@ for (i in 1:1000) {
 This is pretty great. This is, in effect, simulating central limit theorem in about 5 or 6 lines of code.
 
 ### Note on efficiency
-for loops can be great for a lot of things. I think they're best on smaller data sets because one thing they're notably bad with is when you are working with larger datasets. When you're working with larger datasets, you'll want to do something called vectorized operations or use a package that does vectorized operations for you to speed up processing.
+for loops can be great for a lot of things, efficient code is not one of them (especially when working with larger datasets). To optimize efficiency, you'll want to use something called vectorized operations or use a package that does vectorized operations for you to speed up processing.
 
 <img src="running_in_place.gif" alt="runninginplace"></img>
 
 
 <!-- ES: This can go anywhere -->
+## Final Note on Function Documentation
 One of the best functions is the ```help()``` function. For instance if you wanted to know what the ```mean()``` function does, you can type ```help(mean)```. A page should pop up in your RStudio Help box.
 
 The help page usually provides with:
