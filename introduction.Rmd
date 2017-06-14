@@ -341,7 +341,14 @@ Now we have a simple scatter plot of the 'x' object. The y-axis label is 'x' and
 
 #Create an example for the plot
 
-## Functions
+## For Loops
+
+
+
+
+<img src="running_in_place.gif" alt="runninginplace"></img>
+
+
 <!-- ES: This can go anywhere -->
 One of the best functions is the ```help()``` function. For instance if you wanted to know what the ```mean()``` function does, you can type ```help(mean)```. A page should pop up in your RStudio Help box.
 
@@ -369,5 +376,5 @@ Base R comes with a lot of functions. For example, if you wanted to create a lin
 # Thank you! 
 We're done for now. Congratulations. We got through a lot of the basics of developing in R. Let's celebrate.
 
-<img src="its_over.gif" alt="itsover></img>
+<img src="its_over.gif" alt="itsover"></img>
 
