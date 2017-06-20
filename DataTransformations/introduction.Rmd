@@ -9,6 +9,14 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Workshop Overview
+  -  The pipe: `%>%` (Ceci n'est pas une pipe)
+  - Selecting: `select()`
+  - Filtering: `filter()`
+  - Creating Columns: `mutate()`
+  - Aggregating: `group_by()`
+  - Aggregate summary: `summarise()`
+  
 ## Tidy Data
 
 ## The Pipe
