@@ -27,10 +27,10 @@ The pipe is fundamental a tidy data workflow. As a bit of background, the pipe w
 
 The name `magrittr` comes from the famous surrealist painting from **Rene Magritte** as seen below.
 
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/MagrittePipe.jpg/300px-MagrittePipe.jpg" width=100%/>
+<!-- <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/MagrittePipe.jpg/300px-MagrittePipe.jpg" width=100%/> -->
 
-Hadley's cleverness is embodied by the below picture.
-<img src="https://itsalocke.com/wp-content/uploads/2015/04/magrittr_m6tn2w.jpg" width=100% />
+<!-- Hadley's cleverness is embodied by the below picture. -->
+<!-- <img src="https://itsalocke.com/wp-content/uploads/2015/04/magrittr_m6tn2w.jpg" width=100% /> -->
 
 
 The pipe (`%>%`) makes the value that you *piped forward* the first argument within a function call. If the piped value isn't the first argument, you can use `.` to represent those data (this is a lot easier than typing the same value name over and over).
@@ -44,7 +44,7 @@ Before we get into the `dplyr` verbs, let's use some functions that we should al
   - `str()`
   - `summary()`
 
-Let's explore the pipe with some data about major battles in A Song of Ice and Fire (Game of Thrones). Thank you to [Chris Albon]("https://github.com/chrisalbon/war_of_the_five_kings_dataset") for making the data set.
+Let's explore the pipe with some data about major battles in A Song of Ice and Fire (Game of Thrones). Thank you to [@Chrisalbon]("https://github.com/chrisalbon/war_of_the_five_kings_dataset") for making the data set.
 
 
 First, read the data to make it available:
@@ -112,23 +112,79 @@ GOT %>%
 GOT %>%
   select(attacker_king, name, defender_king)
 ```
+You can also use the `-` (subtraction operator) to select everything **but** the specified column.
+
+```{r}
+GOT %>%
+  select(-defender_king)
+```
+Additionally, you can select a number columns positionally by using a colon `:`.
+
+```{r}
+GOT %>%
+  select(attacker_king:attacker_size)
+```
+
 ### `select()` helper verbs
 
-- there are helper functions for selecting, some of the common ones being:
+`dplyr` also provides a number of helper verbs that aid in selecting columns. The helper functions we will explore are:
+
   - `starts_with()`
   - `ends_with()`
-  - `contains()`
   - `everything()`
   
+Often times column names will follow a pattern. Column names might have similar prefixes or suffixes. This Game of Thrones data set has a number of columns that start with *attacker* or *defender*, and two columns that end with *king*.
+
+`dplyr`'s helper verbs can aid in selecting based on prefixes or suffixes using `starts_with()` and `ends_with()` respectively. The only argument you need to supply to these functions is a string to match (remeber that a string is any characters enclosed by quotes, eg. `"my string"`).
+
+To see how this works, let's look at just those columns that start with `attacker`, and end with `king`.
+
+```{r}
+GOT %>%
+  select(starts_with("attacker"))
+
+GOT %>% 
+  select(ends_with("king"))
+```
+
+Sometimes it is helpful to have select columns before others. `select()` can be used to specify column order, but if you wanted to keep all of the other columns and not specify every remaining one the verb `everything()` would select every remaining column.
+
+**Example**:
+Lets arrange the data frame to be ordered by the attacking king then every other column.
+
+```{r}
+GOT %>%
+  select(attacker_king, everything())
+```
+### Putting it all together
+
+Now lets try and combine all of the select function into one select statement. 
+
+Say we want to have a data frame containing the battle name, all columns starting with `"attacker"`, and everything else except the defender king.
+
+```{r}
+GOT %>%
+  select(name, starts_with("attacker"), everything(), -defender_king)
+```
+
+There are additional options that select columns based on a specific criteria including, but not limited to:
+
+  - `contains()`: column name has a specified character string in it
+  - `matches()`: uses a regex (regular expression) to match column names
+  - `one_of()`: selects column names from a group of names
 
 
 ## Filtering
 
+`filter()` is personally my favorite `dplyr` verb. It provides a very intuitive, and clean way of subsetting data. `filter()` is used to identify rows/observations/cases where supplied conditions are true. This should be familiar to those who are comfortable with querying using a `SQL` `where` clause.
+
+Before we can get into filtering, we need to be comfortable with logical operators.
 
 ## Mutate
 
 ## Group By
 
-## Summarise
+## Sum
+marise
 
 ## dbplyr
