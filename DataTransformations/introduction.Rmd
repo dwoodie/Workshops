@@ -5,7 +5,8 @@ date: "6/19/2017"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```
+{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -16,10 +17,31 @@ knitr::opts_chunk$set(echo = TRUE)
   - Creating Columns: `mutate()`
   - Aggregating: `group_by()`
   - Aggregate summary: `summarise()`
-  
+
 ## Tidy Data
 
 ## The Pipe
+
+The pipe is fundamental a tidy data workflow. As a bit of background, the pipe was first implemented in Hadley Wickham's package `magrittr`. The package's sole purpose was to introduce the pipe operator to chain commands together. The pipe (`%>%`) sends a value forward into a function call.
+
+The name `magrittr` comes from the famous surrealist painting from **Rene Magritte** as seen below.
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/MagrittePipe.jpg/300px-MagrittePipe.jpg" width=100%/>
+
+Hadley's cleverness is embodied by the below picture.
+<img src="https://itsalocke.com/wp-content/uploads/2015/04/magrittr_m6tn2w.jpg" width=100% />
+
+
+The pipe (`%>%`) makes the value that you *piped forward* the first argument within a function call. If the piped value isn't the first argument, you can use `.` to represent those data (this is a lot easier than typing the same value name over and over).
+
+As an example, we can use a function that we know well and usually only takes 1 argument: `head()`. `head()` is used to preview the first 6 rows of data.
+
+Let's try this with some new data in the newest release of `dplyr`.
+
+```{r}
+starwars %>%
+  head()
+```
+
 
 ## Filtering
 
