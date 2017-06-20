@@ -1,0 +1,39 @@
+name,attacker_outcome,attacker_king,defender_king,attacker_size,defender_size
+Battle of the Golden Tooth,win,Joffrey/Tommen Baratheon,Robb Stark,15000,4000
+Battle at the Mummer's Ford,win,Joffrey/Tommen Baratheon,Robb Stark,NA,120
+Battle of Riverrun,win,Joffrey/Tommen Baratheon,Robb Stark,15000,10000
+Battle of the Green Fork,loss,Robb Stark,Joffrey/Tommen Baratheon,18000,20000
+Battle of the Whispering Wood,win,Robb Stark,Joffrey/Tommen Baratheon,1875,6000
+Battle of the Camps,win,Robb Stark,Joffrey/Tommen Baratheon,6000,12625
+Sack of Darry,win,Joffrey/Tommen Baratheon,Robb Stark,NA,NA
+Battle of Moat Cailin,win,Balon/Euron Greyjoy,Robb Stark,NA,NA
+Battle of Deepwood Motte,win,Balon/Euron Greyjoy,Robb Stark,1000,NA
+Battle of the Stony Shore,win,Balon/Euron Greyjoy,Robb Stark,264,NA
+Battle of Torrhen's Square,win,Robb Stark,Balon/Euron Greyjoy,244,900
+Battle of Winterfell,win,Balon/Euron Greyjoy,Robb Stark,20,NA
+Sack of Torrhen's Square,win,Balon/Euron Greyjoy,Balon/Euron Greyjoy,NA,NA
+Sack of Winterfell,win,Joffrey/Tommen Baratheon,Robb Stark,618,2000
+Battle of Oxcross,win,Robb Stark,Joffrey/Tommen Baratheon,6000,10000
+Siege of Storm's End,win,Stannis Baratheon,Renly Baratheon,5000,20000
+Battle of the Fords,loss,Joffrey/Tommen Baratheon,Robb Stark,20000,10000
+Sack of Harrenhal,win,Robb Stark,Joffrey/Tommen Baratheon,100,100
+Battle of the Crag,win,Robb Stark,Joffrey/Tommen Baratheon,6000,NA
+Battle of the Blackwater,loss,Stannis Baratheon,Joffrey/Tommen Baratheon,21000,7250
+Siege of Darry,win,Robb Stark,Joffrey/Tommen Baratheon,NA,NA
+Battle of Duskendale,loss,Robb Stark,Joffrey/Tommen Baratheon,3000,NA
+Battle of the Burning Septry,win,NA,NA,NA,NA
+Battle of the Ruby Ford,win,Joffrey/Tommen Baratheon,Robb Stark,NA,6000
+Retaking of Harrenhal,win,Joffrey/Tommen Baratheon,NA,NA,NA
+The Red Wedding,win,Joffrey/Tommen Baratheon,Robb Stark,3500,3500
+Siege of Seagard,win,Robb Stark,Joffrey/Tommen Baratheon,NA,NA
+Battle of Castle Black,loss,Stannis Baratheon,Mance Rayder,100000,1240
+Fall of Moat Cailin,win,Joffrey/Tommen Baratheon,Balon/Euron Greyjoy,NA,NA
+Sack of Saltpans,win,NA,NA,NA,NA
+Retaking of Deepwood Motte,win,Stannis Baratheon,Balon/Euron Greyjoy,4500,200
+Battle of the Shield Islands,win,Balon/Euron Greyjoy,Joffrey/Tommen Baratheon,NA,NA
+"Invasion of Ryamsport, Vinetown, and Starfish Harbor",win,Balon/Euron Greyjoy,Joffrey/Tommen Baratheon,NA,NA
+Second Seige of Storm's End,win,Joffrey/Tommen Baratheon,Stannis Baratheon,NA,200
+Siege of Dragonstone,win,Joffrey/Tommen Baratheon,Stannis Baratheon,2000,NA
+Siege of Riverrun,win,Joffrey/Tommen Baratheon,Robb Stark,3000,NA
+Siege of Raventree,win,Joffrey/Tommen Baratheon,Robb Stark,1500,NA
+Siege of Winterfell,NA,Stannis Baratheon,Joffrey/Tommen Baratheon,5000,8000
