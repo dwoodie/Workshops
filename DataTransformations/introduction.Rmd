@@ -5,12 +5,13 @@ date: "6/19/2017"
 output: html_document
 ---
 
-```
-{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
 ```
 
 # Workshop Overview
+
   -  The pipe: `%>%` (Ceci n'est pas une pipe)
   - Selecting: `select()`
   - Filtering: `filter()`
@@ -25,25 +26,103 @@ knitr::opts_chunk$set(echo = TRUE)
 The pipe is fundamental a tidy data workflow. As a bit of background, the pipe was first implemented in Hadley Wickham's package `magrittr`. The package's sole purpose was to introduce the pipe operator to chain commands together. The pipe (`%>%`) sends a value forward into a function call.
 
 The name `magrittr` comes from the famous surrealist painting from **Rene Magritte** as seen below.
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/MagrittePipe.jpg/300px-MagrittePipe.jpg" width=100%/>
+<!-- <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/MagrittePipe.jpg/300px-MagrittePipe.jpg" width=100%/> -->
 
-Hadley's cleverness is embodied by the below picture.
-<img src="https://itsalocke.com/wp-content/uploads/2015/04/magrittr_m6tn2w.jpg" width=100% />
+<!-- Hadley's cleverness is embodied by the below picture. -->
+<!-- <img src="https://itsalocke.com/wp-content/uploads/2015/04/magrittr_m6tn2w.jpg" width=100% /> -->
 
 
 The pipe (`%>%`) makes the value that you *piped forward* the first argument within a function call. If the piped value isn't the first argument, you can use `.` to represent those data (this is a lot easier than typing the same value name over and over).
 
-As an example, we can use a function that we know well and usually only takes 1 argument: `head()`. `head()` is used to preview the first 6 rows of data.
+- the pipe works with the functions in dplyr because the first argument is almost always the data source
 
-Let's try this with some new data in the newest release of `dplyr`.
+Before we get into the `dplyr` verbs, let's use some functions that we should all be somewhat familiar with and usually only take 1 argument:
+
+  - `head()`
+  - `dim()`
+  - `str()`
+  - `summary()`
+
+Let's explore the pipe with some data about major battles in A Song of Ice and Fire (Game of Thrones). Thank you to [Chris Albon]("https://github.com/chrisalbon/war_of_the_five_kings_dataset") for making the data set.
+
+
+First, read the data to make it available:
+
+```{r, message=FALSE, warning=FALSE}
+# Read the data
+GOT <- readr::read_csv("data/GoT_demo_dat.csv")
+```
+
+Try all of the functions as you normally would:
+```{r, eval=FALSE}
+head(GOT)
+dim(GOT)
+str(GOT)
+summary(GOT)
+```
+
+Try the functions using the pipe:
+
+```{r, eval=FALSE}
+GOT %>% head() # preview the data frame (tibble)
+
+GOT %>% dim() # gets the dimensions (rows and colums)
+
+GOT %>% str() # gets the dataframe structure
+
+GOT %>% summary() # creates column and data frame summary
+```
+
+This data set has been modified from it's original size and shape to be a bit more friendly. There are 6 columns:
+
+  - `name`: name of the battle
+  - `attacker_outcome`: Whether the battle was won or lost by the attacker
+  - `attacker_king`: Which King initiated the attack
+  - `defender_king`: Which king had to defend
+  - `attacker_size`: Number of people in battle for attacker
+  - `defender_size`: Number of people in battle for defender
+
+### Review
+
+* The pipe sends values forward as the first function argument.
+* Values that have been piped can be accessed by using `.`
+
+Now that we have a sense of how the pipe works. We can explore some of the famous `dplyr` verbs.
+
+## Select
+
+Often times you will have more columns than you're actually interested in. With the `select()` function it is possible to return a data frame which contains only columns that are specified. Select can also be used to rearrange column order.
+
+### Exploring Basic Functionality
+
+- select specific columns
+- reorder columns
+
+#### Example:
+
+Select the battle name, battle outcome, and the attacking king. These are variables `name`, `attacker_outcome`, `attacker_king`, repsectively. 
+
+Notice how if you change the order of the select statement it changes the order of the columns.
 
 ```{r}
-starwars %>%
-  head()
+GOT %>% 
+  select(name, attacker_king, defender_king)
+
+GOT %>%
+  select(attacker_king, name, defender_king)
 ```
+### `select()` helper verbs
+
+- there are helper functions for selecting, some of the common ones being:
+  - `starts_with()`
+  - `ends_with()`
+  - `contains()`
+  - `everything()`
+  
 
 
 ## Filtering
+
 
 ## Mutate
 
