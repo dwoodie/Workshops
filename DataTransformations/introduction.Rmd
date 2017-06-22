@@ -178,7 +178,32 @@ There are additional options that select columns based on a specific criteria in
 
 `filter()` is personally my favorite `dplyr` verb. It provides a very intuitive, and clean way of subsetting data. `filter()` is used to identify rows/observations/cases where supplied conditions are true. This should be familiar to those who are comfortable with querying using a `SQL` `where` clause.
 
-Before we can get into filtering, we need to be comfortable with logical operators.
+Before we can get into filtering, we need to be comfortable with logical operators. The main operators you will use for `filter()` are:
+
+  - `==` : equal to
+  - `!=` : not equal to
+  - `>` or `>=` : greater than *or* greater than or equal to
+  - `<` or `<=` : less than *or* less than or equal to
+  - `&` : and (vectorized)
+  - `|` : or (vectorized)
+  
+### Checking equivalence
+
+The operators `==` and `!=` are use to check for equivalence. I think of it as asking a question. For example I can write **"Is 1 equal to 1?"** as `1 == 1`. I know that 1 is actually equivalent to 1 and therefore expect the result to be `TRUE`. Conversely, since we can ask if **"is 1 *not* equal to 1?"** as `1 != 1`. We can expect the result to be no, or `FALSE`. 
+
+Similarly we can check quantities using greater than or less than operators. 
+
+- *Is 2 greater than 1?*
+    - `2 > 1`: `TRUE`
+- *Is 2 less than 1?*
+    - `2 < 1`: `FALSE`
+- *Is 2 greater than or equal to 2?*
+    - `2 >= 2`: `TRUE`
+- *Is 2 less than or equal to 1?*
+    - `2 <= 1`: `FALSE`
+
+
+
 
 ## Mutate
 
